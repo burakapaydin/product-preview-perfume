@@ -14,6 +14,10 @@
 html {
   font-size: 62.5%;
 }
+a {
+  text-decoration: none;
+  color: var(--dark-cyan);
+}
 body {
   background-color: var(--cream);
   color: var(--dark-blue);
@@ -25,7 +29,9 @@ body {
   align-items: center;
   padding: 3rem;
 }
-
+.attribution {
+  text-align: center;
+}
 #card {
   overflow: hidden;
   grid-template-columns: 1fr 1fr;

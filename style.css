@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-blue-gray: hsl(228, 12%, 48%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--cream);
+  color: var(--dark-blue);
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+#card {
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  max-width: 70rem;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+}
+.img {
+  height: 50rem;
+  background: no-repeat center/cover url(/images/image-product-desktop.jpg);
+  width: 100%;
+  transition: width 1.4s ease;
+}
+
+/* .img img {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  transition: 0.9s ease;
+} */
+
+.content {
+  padding: 3rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .logo {
+  letter-spacing: 5px;
+  color: var(--dark-blue-gray);
+  display: inline-block;
+}
+.content h1 {
+  font-size: 3.4rem;
+  font-family: Fraunces, sans-serif;
+  font-weight: bold;
+  line-height: 1;
+}
+.content p {
+  color: var(--dark-blue-gray);
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+.prices {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.price {
+  color: var(--dark-cyan);
+  font-family: Fraunces, sans-serif;
+  font-weight: bold;
+  font-size: 3.6rem;
+  margin-right: 2rem;
+}
+.price-two {
+  color: var(--dark-blue-gray);
+  text-decoration: line-through;
+  font-size: 1.3rem;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.content button {
+  background-color: var(--dark-cyan);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1.5rem;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+#card:hover .img {
+  width: 110%;
+}
+
+button:hover {
+  background-color: hsl(157, 43%, 19%);
+}
+
+@media screen and (max-width: 628px) {
+  #card {
+    grid-template-columns: 1fr;
+  }
+  .img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .content {
+    gap: 3rem;
+  }
+  .content button {
+    display: block;
+    width: 100%;
+    padding: 1.8rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .content {
+    gap: 2.2rem;
+  }
+  .content h1 {
+    font-size: 2.8rem;
+  }
+  .content p {
+    font-size: 1.4rem;
+  }
+  .price {
+    font-size: 3rem;
+  }
+  .content button {
+    padding: 1.2rem;
+  }
+}

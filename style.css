@@ -36,15 +36,15 @@ body {
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
   display: grid;
-  max-width: 70rem;
+  max-width: 62rem;
   border-radius: 1.5rem;
   margin-bottom: 2rem;
 }
 .img {
-  height: 50rem;
+  height: 48rem;
   background: no-repeat center/cover url(/images/image-product-desktop.jpg);
-  width: 100%;
-  transition: width 1.4s ease;
+  background-size: 103%;
+  transition: background-size 1s ease;
 }
 
 /* .img img {
@@ -107,13 +107,13 @@ button {
   border: none;
   outline: none;
   color: white;
-  padding: 1.5rem;
+  padding: 1.6rem;
   font-weight: 700;
   border-radius: 10px;
 }
 
 #card:hover .img {
-  width: 110%;
+  background-size: 120%;
 }
 
 button:hover {
